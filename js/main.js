@@ -177,3 +177,21 @@ document.addEventListener("DOMContentLoaded", async () => {
     })
   }
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const joinClubBtn = document.getElementById("joinClubBtn");
+
+  const username = localStorage.getItem("username");
+
+  if (!joinClubBtn) return;
+
+  const icon = joinClubBtn.querySelector("i");
+  const text = joinClubBtn.querySelector("span");
+
+  if (username) {
+    joinClubBtn.href = "./Trang cá nhân/profile.php";
+
+    icon.className = "bi bi-person-circle";
+
+    text.textContent = "Trang cá nhân";
+  }
+});

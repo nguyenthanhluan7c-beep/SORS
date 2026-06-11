@@ -806,6 +806,465 @@ body{
     }
 }
 /* ==================================================
+   HOME HERO
+================================================== */
+
+.home-hero {
+    width: 100%;
+    padding: 18px 20px 0;
+}
+
+#sorsHeroCarousel {
+    position: relative;
+
+    width: min(1500px, 100%);
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 55px rgba(47, 58, 86, 0.16);
+}
+
+.carousel-item {
+    position: relative;
+
+    height: 540px;
+
+    overflow: hidden;
+}
+
+.hero-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transform: scale(1.02);
+
+    transition:
+        filter 0.35s ease,
+        transform 6s ease;
+}
+
+.carousel-item.active .hero-image {
+    transform: scale(1.08);
+}
+
+/* Có thể chỉnh riêng vị trí cắt của từng ảnh */
+
+.hero-image-1 {
+    object-position: center 45%;
+}
+
+.hero-image-2 {
+    object-position: center 50%;
+}
+
+.hero-image-3 {
+    object-position: center 55%;
+}
+
+/* Lớp phủ để chữ dễ đọc */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(90deg,
+            rgba(15, 18, 32, 0.86) 0%,
+            rgba(47, 58, 86, 0.65) 42%,
+            rgba(47, 58, 86, 0.18) 70%,
+            rgba(15, 18, 32, 0.08) 100%);
+
+    z-index: 1;
+}
+
+.hero-container {
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    width: min(1400px, calc(100% - 100px));
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 680px;
+
+    color: #ffffff;
+}
+
+.hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 20px;
+    padding: 8px 14px;
+
+    color: var(--secondary-light);
+    background: rgba(255, 255, 255, 0.1);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+
+    backdrop-filter: blur(8px);
+
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.hero-label i {
+    color: var(--secondary);
+}
+
+.hero-content h1,
+.hero-content h2 {
+    max-width: 650px;
+    margin: 0 0 20px;
+
+    color: #ffffff;
+
+    font-size: clamp(2.4rem, 5vw, 4.7rem);
+    font-weight: 850;
+    line-height: 1.08;
+    letter-spacing: -1px;
+
+    text-shadow:
+        0 5px 22px rgba(0, 0, 0, 0.25);
+}
+
+.hero-content h2 {
+    font-size: clamp(2.2rem, 4.5vw, 4.2rem);
+}
+
+.hero-content h1 span,
+.hero-content h2 span {
+    display: block;
+
+    color: var(--secondary);
+}
+
+.hero-content>p {
+    max-width: 590px;
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.84);
+
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+}
+
+.hero-btn {
+    min-height: 48px;
+    padding: 11px 20px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+
+    border-radius: var(--radius);
+
+    font-weight: 750;
+    text-decoration: none;
+
+    transition: var(--transition);
+}
+
+.hero-btn.primary {
+    color: #2f3a56;
+    background: var(--secondary);
+
+    border: 1px solid var(--secondary);
+
+    box-shadow:
+        0 10px 25px rgba(242, 193, 78, 0.28);
+}
+
+.hero-btn.primary:hover {
+    color: #2f3a56;
+    background: var(--secondary-light);
+
+    transform: translateY(-3px);
+}
+
+.hero-btn.secondary {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.38);
+
+    backdrop-filter: blur(8px);
+}
+
+.hero-btn.secondary:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.18);
+
+    transform: translateY(-3px);
+}
+
+/* Nút điều hướng */
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 70px;
+
+    z-index: 5;
+}
+
+.hero-control {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #ffffff;
+    background: rgba(15, 18, 32, 0.46);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+
+    backdrop-filter: blur(8px);
+
+    transition: var(--transition);
+}
+
+.hero-control:hover {
+    color: #2f3a56;
+    background: var(--secondary);
+
+    transform: scale(1.08);
+}
+
+/* Dấu chấm */
+
+.carousel-indicators {
+    z-index: 6;
+
+    margin-bottom: 18px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 9px;
+    height: 9px;
+    margin: 0 5px;
+
+    background-color: rgba(255, 255, 255, 0.65);
+
+    border: none;
+    border-radius: 50%;
+
+    opacity: 1;
+
+    transition: var(--transition);
+}
+
+.carousel-indicators .active {
+    width: 30px;
+
+    background-color: var(--secondary);
+
+    border-radius: 999px;
+}
+
+/* ==================================================
+   DARK MODE
+================================================== */
+
+[data-theme="dark"] #sorsHeroCarousel {
+    border-color: var(--border);
+
+    box-shadow:
+        0 22px 60px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .hero-image {
+    filter:
+        brightness(0.72) contrast(1.08) saturate(0.88);
+}
+
+[data-theme="dark"] .hero-overlay {
+    background:
+        linear-gradient(90deg,
+            rgba(8, 10, 20, 0.93) 0%,
+            rgba(15, 18, 32, 0.76) 45%,
+            rgba(15, 18, 32, 0.28) 75%,
+            rgba(15, 18, 32, 0.18) 100%);
+}
+.hero-image-1 {
+    object-position: 65% center;
+}
+/* ==================================================
+   RESPONSIVE TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+    .home-hero {
+        padding: 14px 14px 0;
+    }
+
+    #sorsHeroCarousel {
+        border-radius: 20px;
+    }
+
+    .carousel-item {
+        height: 460px;
+    }
+
+    .hero-container {
+        width: calc(100% - 90px);
+    }
+
+    .hero-content {
+        max-width: 610px;
+    }
+
+    .hero-content h1,
+    .hero-content h2 {
+        font-size: clamp(2.1rem, 6vw, 3.8rem);
+    }
+
+    .hero-content>p {
+        max-width: 540px;
+
+        font-size: 1rem;
+    }
+}
+
+/* ==================================================
+   RESPONSIVE MOBILE
+================================================== */
+
+@media (max-width: 650px) {
+    .home-hero {
+        padding: 10px 10px 0;
+    }
+
+    #sorsHeroCarousel {
+        border-radius: 16px;
+    }
+
+    .carousel-item {
+        height: 480px;
+    }
+
+    .hero-image {
+        object-position: 65% center;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(to top,
+                rgba(15, 18, 32, 0.96) 0%,
+                rgba(15, 18, 32, 0.78) 55%,
+                rgba(15, 18, 32, 0.3) 100%);
+    }
+
+    .hero-container {
+        width: 100%;
+        padding: 28px 22px 55px;
+
+        align-items: flex-end;
+    }
+
+    .hero-label {
+        margin-bottom: 14px;
+        padding: 7px 11px;
+
+        font-size: 0.75rem;
+    }
+
+    .hero-content h1,
+    .hero-content h2 {
+        margin-bottom: 14px;
+
+        font-size: clamp(1.9rem, 9vw, 2.8rem);
+        line-height: 1.1;
+    }
+
+    .hero-content>p {
+        display: -webkit-box;
+        overflow: hidden;
+
+        font-size: 0.9rem;
+        line-height: 1.55;
+
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+    }
+
+    .hero-actions {
+        gap: 10px;
+
+        margin-top: 20px;
+    }
+
+    .hero-btn {
+        min-height: 43px;
+        padding: 9px 14px;
+
+        font-size: 0.86rem;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+
+    .carousel-indicators {
+        margin-bottom: 14px;
+    }
+}
+
+/* ==================================================
+   MOBILE NHỎ
+================================================== */
+
+@media (max-width: 390px) {
+    .carousel-item {
+        height: 440px;
+    }
+
+    .hero-container {
+        padding-right: 17px;
+        padding-left: 17px;
+    }
+
+    .hero-content h1,
+    .hero-content h2 {
+        font-size: 1.85rem;
+    }
+
+    .hero-btn {
+        width: 100%;
+    }
+}
+/* ==================================================
    RESPONSIVE CHUNG
 ================================================== */
 

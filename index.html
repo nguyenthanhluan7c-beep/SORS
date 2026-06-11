@@ -84,6 +84,207 @@
       </button>
       <div class="user_info" id="user_info"></div>
     </div>
+    <main>
+      <section class="home-hero">
+        <div
+          id="sorsHeroCarousel"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+          data-bs-interval="5000"
+          data-bs-pause="hover"
+        >
+          <!-- Dấu chấm chuyển slide -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#sorsHeroCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Banner 1"
+            ></button>
+
+            <button
+              type="button"
+              data-bs-target="#sorsHeroCarousel"
+              data-bs-slide-to="1"
+              aria-label="Banner 2"
+            ></button>
+
+            <button
+              type="button"
+              data-bs-target="#sorsHeroCarousel"
+              data-bs-slide-to="2"
+              aria-label="Banner 3"
+            ></button>
+          </div>
+
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <article class="carousel-item active">
+              <img
+                src="./assets/images/hero-1.png"
+                class="hero-image hero-image-1"
+                alt="Câu lạc bộ SORS"
+              />
+
+              <div class="hero-overlay"></div>
+
+              <div class="hero-container">
+                <div class="hero-content">
+                  <span class="hero-label">
+                    <i class="bi bi-stars"></i>
+                    Spiritual & Occult Research Society
+                  </span>
+
+                  <h1>
+                    Hiểu người, hiểu mình,
+                    <span>không phó mặc số phận</span>
+                  </h1>
+
+                  <p>
+                    Không gian kết nối, nghiên cứu và chia sẻ kiến thức về tâm
+                    linh, huyền học dưới những góc nhìn đa chiều.
+                  </p>
+
+                  <div class="hero-actions">
+                    <a
+                      href="./Trang giới thiệu/gioithieu.html"
+                      class="hero-btn primary"
+                    >
+                      Khám phá SORS
+                      <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                    <a
+                      href="./login.html"
+                      class="hero-btn secondary"
+                      id="joinClubBtn"
+                    >
+                      <i class="bi bi-person-plus"></i>
+                      <span>Tham gia câu lạc bộ</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Slide 2 -->
+            <article class="carousel-item">
+              <img
+                src="./assets/images/hero-2.png"
+                class="hero-image hero-image-2"
+                alt="Nghiên cứu huyền học phương Đông"
+              />
+
+              <div class="hero-overlay"></div>
+
+              <div class="hero-container">
+                <div class="hero-content">
+                  <span class="hero-label">
+                    <i class="bi bi-yin-yang"></i>
+                    Huyền học phương Đông
+                  </span>
+
+                  <h2>
+                    Khám phá tri thức
+                    <span>Đông phương cổ truyền</span>
+                  </h2>
+
+                  <p>
+                    Tìm hiểu Tử vi, Bát tự, Phong thủy và Nhân tướng dưới góc
+                    nhìn có hệ thống, khách quan và thực tế.
+                  </p>
+
+                  <div class="hero-actions">
+                    <a
+                      href="./Trang ứng dụng/application.html"
+                      class="hero-btn primary"
+                    >
+                      Xem thư viện
+                      <i class="bi bi-book"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Slide 3 -->
+            <article class="carousel-item">
+              <img
+                src="./assets/images/hero-3.png"
+                class="hero-image hero-image-3"
+                alt="Nghiên cứu huyền học phương Tây"
+              />
+
+              <div class="hero-overlay"></div>
+
+              <div class="hero-container">
+                <div class="hero-content">
+                  <span class="hero-label">
+                    <i class="bi bi-moon-stars-fill"></i>
+                    Huyền học phương Tây
+                  </span>
+
+                  <h2>
+                    Kết nối cùng cộng đồng
+                    <span>đam mê khám phá</span>
+                  </h2>
+
+                  <p>
+                    Cùng nghiên cứu Chiêm tinh, Tarot, Thần số học và tham gia
+                    những hoạt động, sự kiện chuyên môn của SORS.
+                  </p>
+
+                  <div class="hero-actions">
+                    <a
+                      href="./Trang sự kiện/event.html"
+                      class="hero-btn primary"
+                    >
+                      Xem sự kiện
+                      <i class="bi bi-calendar-event"></i>
+                    </a>
+
+                    <a
+                      href="./Trang bài viết/news.html"
+                      class="hero-btn secondary"
+                    >
+                      Đọc bài viết
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Nút trái -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#sorsHeroCarousel"
+            data-bs-slide="prev"
+            aria-label="Slide trước"
+          >
+            <span class="hero-control">
+              <i class="bi bi-chevron-left"></i>
+            </span>
+          </button>
+
+          <!-- Nút phải -->
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#sorsHeroCarousel"
+            data-bs-slide="next"
+            aria-label="Slide tiếp theo"
+          >
+            <span class="hero-control">
+              <i class="bi bi-chevron-right"></i>
+            </span>
+          </button>
+        </div>
+      </section>
+    </main>
     <footer class="site-footer">
       <div class="footer-container">
         <!-- Thông tin CLB -->
