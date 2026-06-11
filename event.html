@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SORS - Trang chủ</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header_banner">
+        <img
+          src="https://res.cloudinary.com/dngjmqa1q/image/upload/v1781141070/bd799758-0a1a-46f4-8d2b-cbaab9afb3e6_vsx15y.png"
+          alt="header_img"
+        />
+      </div>
+    </header>
+    <div class="nav_bar">
+      <div class="web_logo">
+        <img
+          src="https://res.cloudinary.com/dngjmqa1q/image/upload/v1781059249/f20cf04f-8f34-472c-987c-3633e831b537_j0mhck.png"
+          alt="web_logo"
+          class="web_logo"
+        />
+      </div>
+      <button
+        type="button"
+        class="mobile-menu-btn"
+        id="mobileMenuBtn"
+        aria-label="Mở menu điều hướng"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        <i class="bi bi-list"></i>
+      </button>
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-menu">
+          <li>
+            <a href="index.html">Trang chủ</a>
+          </li>
+          <li>
+            <a href="gioithieu.html">Giới thiệu</a>
+          </li>
+          <li>
+            <a href="event.html" class="active">Sự kiện</a>
+          </li>
+          <li>
+            <a href="news.html">Bài viết</a>
+          </li>
+          <li>
+            <a href="application.html">Thư viện ứng dụng</a>
+          </li>
+          <li>
+            <a href="lienhe.html">Liên Hệ</a>
+          </li>
+        </ul>
+      </nav>
+      <button
+        type="button"
+        class="theme-toggle"
+        id="themeToggle"
+        aria-label="Chuyển chế độ sáng tối"
+        aria-pressed="false"
+      >
+        <span class="theme-toggle__icon theme-toggle__sun">
+          <i class="bi bi-sun-fill"></i>
+        </span>
+
+        <span class="theme-toggle__icon theme-toggle__moon">
+          <i class="bi bi-moon-stars-fill"></i>
+        </span>
+
+        <span class="theme-toggle__thumb"></span>
+      </button>
+      <div class="user_info">
+        <img
+          src="https://res.cloudinary.com/dngjmqa1q/image/upload/v1781136396/sg-11134201-7rcez-lsc8tfaio0om12_ny2dfs.jpg"
+          alt="Ảnh đại diện"
+          class="user_avatar"
+        />
+        <p>Xin chào, Kuro</p>
+        <button
+          type="button"
+          class="user_menu_btn"
+          id="userMenuBtn"
+          aria-label="Mở menu người dùng"
+          aria-expanded="false"
+        >
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <ul class="user-nav" id="userMenu">
+          <li>
+            <a href="./Trang cá nhân/profile.html">
+              <i class="bi bi-person"></i>
+              Thông tin cá nhân
+            </a>
+          </li>
+          <li>
+            <a href="./Trang bài đăng/user-posts.html">
+              <i class="bi bi-file-earmark-text"></i>
+              Bài đăng
+            </a>
+          </li>
+          <li>
+            <a href="./Trang cài đặt/settings.html">
+              <i class="bi bi-gear"></i>
+              Cài đặt
+            </a>
+          </li>
+          <li class="menu-divider"></li>
+          <li>
+            <a href="./logout.php" class="logout-link">
+              <i class="bi bi-box-arrow-right"></i>
+              Đăng xuất
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- Thông tin CLB -->
+        <div class="footer-about">
+          <a href="index.html" class="footer-brand">
+            <img
+              src="https://res.cloudinary.com/dngjmqa1q/image/upload/v1781059249/f20cf04f-8f34-472c-987c-3633e831b537_j0mhck.png"
+              alt="Logo SORS"
+            />
+
+            <div>
+              <h3>SORS</h3>
+              <p>Spiritual & Occult Research Society</p>
+            </div>
+          </a>
+
+          <p class="footer-description">
+            Câu lạc bộ nghiên cứu tâm linh và huyền học, nơi kết nối kiến thức,
+            trải nghiệm và những góc nhìn đa chiều.
+          </p>
+
+          <p class="footer-slogan">
+            Hiểu người – Hiểu mình – Không phó mặc số phận
+          </p>
+        </div>
+
+        <!-- Điều hướng -->
+        <div class="footer-column">
+          <h4>Điều hướng</h4>
+
+          <ul class="footer-links">
+            <li>
+              <a href="index.html">
+                <i class="bi bi-chevron-right"></i>
+                Trang chủ
+              </a>
+            </li>
+
+            <li>
+              <a href="Trang giới thiệu/gioithieu.html">
+                <i class="bi bi-chevron-right"></i>
+                Giới thiệu
+              </a>
+            </li>
+
+            <li>
+              <a href="Trang sự kiện/event.html">
+                <i class="bi bi-chevron-right"></i>
+                Sự kiện
+              </a>
+            </li>
+
+            <li>
+              <a href="Trang bài viết/news.html">
+                <i class="bi bi-chevron-right"></i>
+                Bài viết
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Thư viện -->
+        <div class="footer-column">
+          <h4>Thư viện</h4>
+
+          <ul class="footer-links">
+            <li>
+              <a href="#">
+                <i class="bi bi-moon-stars"></i>
+                Tử vi
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="bi bi-yin-yang"></i>
+                Bát tự
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="bi bi-stars"></i>
+                Chiêm tinh
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="bi bi-suit-spade"></i>
+                Tarot
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Liên hệ -->
+        <div class="footer-column footer-contact">
+          <h4>Liên hệ</h4>
+
+          <ul>
+            <li>
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>Địa chỉ của câu lạc bộ</span>
+            </li>
+
+            <li>
+              <i class="bi bi-envelope-fill"></i>
+              <a href="mailto:sors@example.com"> sors@example.com </a>
+            </li>
+
+            <li>
+              <i class="bi bi-telephone-fill"></i>
+              <a href="tel:0123456789"> 0123 456 789 </a>
+            </li>
+          </ul>
+
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+
+            <a href="#" aria-label="TikTok">
+              <i class="bi bi-tiktok"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+              <i class="bi bi-youtube"></i>
+            </a>
+
+            <a href="#" aria-label="Email">
+              <i class="bi bi-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © <span id="currentYear"></span>
+          SORS. All rights reserved.
+        </p>
+
+        <div class="footer-policy">
+          <a href="#">Điều khoản sử dụng</a>
+          <span></span>
+          <a href="#">Chính sách bảo mật</a>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
