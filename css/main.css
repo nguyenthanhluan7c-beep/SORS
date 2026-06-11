@@ -369,7 +369,16 @@ body{
 .user_menu_btn i {
     transition: transform 0.25s ease;
 }
-
+.login_btn{
+    background: var(--primary-light);
+    color: var(--light);
+    border-radius: var(--radius);
+    border: 0;
+    padding: 10px;
+}
+.login_btn:hover{
+    background: var(--primary);
+}
 /* Menu nổi bên dưới, không chiếm diện tích navbar */
 .user-nav {
     position: absolute;
